@@ -1,0 +1,36 @@
+<form #form1="ngForm">
+  <p>form-1 validity is :{{form1.valid}}</p>
+  <form #form2="ngForm">
+    <p>form-2 validity is :{{form2.valid}}</p>
+    <input name="name" [ngModel]="form2.name" type="text" id="name" required="required">
+    <form #form21="ngForm">
+      <p>form-2.1 validity is :{{form21.valid}}</p>
+      <input name="name" type="text" [ngModel]="form21.name"  id="name2" required="required">
+    </form>
+    <form #form22="ngForm">
+      <p>form-2.2 validity is :{{form22.valid}}</p>
+      <input name="name" [ngModel]="form22.name" type="text" id="name2.1" required="required">
+    </form>
+    <button>Toogle Reactive Form</button>
+    <form #form3="ngForm">
+      <p>Reactive Form</p>
+      <p>form-3 validity is :{{form3.valid}}</p>
+      <input name="name" [ngModel]="form3.name" type="text" id="name3" required="required">
+
+        <form #form31="ngForm">
+          <p >form-3.1 validity is :{{form31.valid}}</p>
+          <input name="name" [ngModel]="form31.name" type="text" required="required">
+        </form>
+        </form>
+    <form #form4="ngForm">
+      <p>Isolated Form</p>
+      <p>form-4 validity is :{{form4.valid}}</p>
+      <input name="name" [ngModel]="form4.name" type="text" id="name4" required="required">
+
+      <form #form41="ngForm">
+        <p >form-4.1 validity is :{{form41.valid}}</p>
+        <input name="name" [ngModel]="form41.name" type="text" required="required">
+      </form>
+    </form>
+    </form>
+  </form>
